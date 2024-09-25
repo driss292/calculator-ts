@@ -16,10 +16,12 @@ body {
 .calculator {
   width: 450px;
   height: 640px;
-  background: crimson;
+  padding: 20px;
+  background: #000;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px;
 }
 .calculator .display {
   flex: 1;
@@ -33,7 +35,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-gap: 5px;
+  grid-gap: 20px;
   grid-template-areas:
     "AC DE point divide"
     "seven eight nine multiply"
@@ -42,6 +44,44 @@ body {
     "doubleZero zero equal equal";
 }
 
+.display input {
+  width: 100%;
+  padding: 30px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  background: #353b48;
+  box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.3);
+  text-align: right;
+}
+
+input[type="button"] {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #404a57;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transition 0.2s ease;
+}
+
+input[type="button"]:hover {
+  background-color: #57606f;
+  transform: translateY(-3px);
+}
+input[type="button"]:active {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+input[type="button"].operator {
+  background: #ff7979;
+}
+input[type="button"].equal {
+  background: #2ecc71;
+}
 input[value="AC"] {
   grid-area: AC;
 }
@@ -65,7 +105,6 @@ input[value="+"] {
 }
 input[value="="] {
   grid-area: equal;
-  background: blueviolet;
 }
 input[value="00"] {
   grid-area: doubleZero;

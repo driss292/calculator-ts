@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Calculatrice TS</title>
   </head>
   <body>
     <div class="calculator">
@@ -18,28 +18,55 @@
       </div>
       <div class="button-container">
         <form>
-          <input type="button" value="AC" name="AC" aria-label="Clear All" />
-          <input type="button" value="DE" name="DE" aria-label="Delete" />
           <input
+            class="operator"
+            type="button"
+            value="AC"
+            name="AC"
+            aria-label="Clear All"
+          />
+          <input
+            class="operator"
+            type="button"
+            value="DE"
+            name="DE"
+            aria-label="Delete"
+          />
+          <input
+            class="operator"
             type="button"
             value="."
             name="point"
             aria-label="Decimal Point"
           />
           <input
+            class="operator"
             type="button"
             value="x"
             name="multiply"
             aria-label="Multiply"
           />
-          <input type="button" value="÷" name="divide" aria-label="Divide" />
           <input
+            class="operator"
+            type="button"
+            value="÷"
+            name="divide"
+            aria-label="Divide"
+          />
+          <input
+            class="operator"
             type="button"
             value="-"
             name="subtract"
             aria-label="Subtract"
           />
-          <input type="button" value="+" name="add" aria-label="Add" />
+          <input
+            class="operator"
+            type="button"
+            value="+"
+            name="add"
+            aria-label="Add"
+          />
           <input type="button" value="9" name="9" aria-label="Nine" />
           <input type="button" value="8" name="8" aria-label="Eight" />
           <input type="button" value="7" name="7" aria-label="Seven" />
@@ -56,7 +83,13 @@
             name="doubleZero"
             aria-label="Double Zero"
           />
-          <input type="button" value="=" name="equal" aria-label="Equals" />
+          <input
+            class="equal"
+            type="button"
+            value="="
+            name="equal"
+            aria-label="Equals"
+          />
         </form>
       </div>
     </div>
